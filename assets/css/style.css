@@ -1,10 +1,22 @@
 /* #region commons */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* img
+{
+    max-width: 100%;
+} */
 
 body
 {
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(180deg, #009688, #dadbd3);
+    padding-top: 2rem;
 }
 
 /* #endregion commons */
@@ -20,20 +32,61 @@ body
     --my-messagebar: #f3eeea;
     --my-textcolor: #03071a;
 }
+
+.my_text_textcolor
+{
+    color: var(--my-textcolor);
+}
+
+.my_text_icon
+{
+    color: var(--my-icon);
+}
 /* #endregion utilities */
+
 
 /* #region debug */
 
-.debug .container
+.debug .sidebar 
 {
-    height: 600px;
+    border: 1px solid;
+}
+
+.debug .message
+{
+    border: 1px solid;
 }
 
 
 /* #endregion debug */
 
-.container
+/* #region main */
+
+main.container
 {
     width: 80%;
+    height: 90vh;
+    background-color: red;
 }
 
+/* #region sidebar */
+
+.sidebar
+{
+    height: 100%;
+}
+
+.side_top
+{
+    height: 3rem;
+    background-color: var(--my-header);
+}
+
+.side_bottom
+{
+    height: calc(100% - 3rem);
+}
+
+/* #endregion sidebar */
+
+/* #endregion main */
