@@ -19,6 +19,12 @@ body
     padding-top: 2rem;
 }
 
+.acces
+{
+    font-size: 0.75rem;
+    color: var(--my-icon);
+}
+
 /* #endregion commons */
 
 /* #region utilities */
@@ -47,16 +53,6 @@ body
 
 /* #region debug */
 
-.debug .sidebar 
-{
-    border: 1px solid;
-}
-
-.debug .message
-{
-    border: 1px solid;
-}
-
 
 /* #endregion debug */
 
@@ -74,6 +70,7 @@ main.container
 .sidebar
 {
     height: 100%;
+    border-right: 1px solid var(--my-icon);
 }
 
 .side_top
@@ -88,5 +85,16 @@ main.container
 }
 
 /* #endregion sidebar */
+
+/* #region message */
+
+.message_top
+{
+    height: 3rem;
+    background-color: var(--my-header);
+}
+
+/* #endregion message */
+
 
 /* #endregion main */
