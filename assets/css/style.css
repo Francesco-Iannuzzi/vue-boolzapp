@@ -58,12 +58,6 @@ body
 }
 /* #endregion utilities */
 
-
-/* #region debug */
-
-
-/* #endregion debug */
-
 /* #region main */
 
 main.container
@@ -92,16 +86,11 @@ main.container
 
 /* #region side_bottom */
 
-.side_bottom
-{
-    height: calc(100% - 3rem);
-}
-
 .side_bottom .notifications
 {
     background-color: var(--my-notifications);
+    height: 5rem;
 }
-
 
 .notifications i
 {
@@ -122,12 +111,13 @@ main.container
 
 .contacts_search
 {
+    height: 3rem;
     background-color: var(--my-header);
 }
 
 .contacts_list
 {
-    height: 39rem;
+    height: calc(100% - 11rem);
     overflow-y: auto;
 }
 
