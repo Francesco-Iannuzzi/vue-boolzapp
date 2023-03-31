@@ -69,14 +69,14 @@ body
 main.container
 {
     width: 80%;
-    background-color: red;
+    background-color: white;
 }
 
 /* #region section sidebar */
 
 .sidebar
 {
-    height: 100%;
+    height: 51rem;
     border-right: 1px solid var(--my-icon);
 }
 
@@ -108,13 +108,13 @@ main.container
     color: var(--my-notifications);
 }
 
-.notifications_bottom p
+.notifications_info p
 {
     font-size: 0.9rem;
 }
 
 
-.notifications_bottom span
+.notifications_info span
 {
     color: var(--my-icon_message);
     font-size: 0.7rem;
@@ -124,7 +124,33 @@ main.container
 {
     background-color: var(--my-header);
 }
-/* #endregion side_top */
+
+.contact
+{
+    background-color: var(--my-light);
+    border: var(--my-icon);
+    position: relative;
+}
+
+.contacts_info h6
+{
+    font-size: 1rem;
+}
+
+
+.contacts_info span
+{
+    color: var(--my-icon_message);
+    font-size: 0.7rem;
+}
+
+.contact .hour
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/* #endregion side_bottom */
 
 /* #endregion section sidebar */
 
