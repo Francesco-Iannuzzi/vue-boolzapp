@@ -61,7 +61,6 @@ body
 main.container
 {
     width: 80%;
-    height: 90vh;
     background-color: red;
 }
 
@@ -92,6 +91,18 @@ main.container
 {
     height: 3rem;
     background-color: var(--my-header);
+}
+
+.message_main
+{
+    height: calc(45rem);
+    background-image: url('/assets/img/mine.jpg');
+}
+
+.message_bottom
+{
+    height: 3rem;
+    background-color: var(--my-messagebar);
 }
 
 /* #endregion message */
