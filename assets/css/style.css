@@ -6,11 +6,6 @@
     box-sizing: border-box;
 }
 
-/* img
-{
-    max-width: 100%;
-} */
-
 body
 {
     height: 100vh;
@@ -105,9 +100,10 @@ main.container
 {
     height: calc(45rem);
     background-image: url('/assets/img/mine.jpg');
+    overflow-y: auto;
 }
 
-.text_send, .text_received
+.text_sent, .text_received
 {
     margin-bottom: 0.7rem;
     border-radius: 1rem;
@@ -115,7 +111,7 @@ main.container
     position: relative;
 }
 
-.text_send
+.text_sent
 {
     background-color: var(--my-message_send);
     color: var(--my-textcolor);
@@ -129,11 +125,11 @@ main.container
     margin-right: 60%;
 }
 
-.text_send > p, .text_received > p{
+.text_sent > p, .text_received > p{
     font-size: 0.8rem;
 }
 
-.text_send > span, .text_received > span{
+.text_sent > span, .text_received > span{
     color: var(--my-icon);
     font-size: 0.5rem;
     position: absolute;
