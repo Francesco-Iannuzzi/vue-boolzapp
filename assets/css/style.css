@@ -35,8 +35,11 @@ body
     --my-notifications: #8edafc;
     --my-light: #ffffff;
     --my-icon: #b1b1b1;
+    --my-icon_message: #6b7376;
     --my-messagebar: #f3eeea;
     --my-textcolor: #03071a;
+    --my-message_send: #ffffff;
+    --my-message_received: #d5f9ba;
 }
 
 .my_text_textcolor
@@ -47,6 +50,11 @@ body
 .my_text_icon
 {
     color: var(--my-icon);
+}
+
+.my_text_icon_message
+{
+    color: var(--my-icon_message);
 }
 /* #endregion utilities */
 
@@ -64,7 +72,7 @@ main.container
     background-color: red;
 }
 
-/* #region sidebar */
+/* #region section sidebar */
 
 .sidebar
 {
@@ -83,9 +91,9 @@ main.container
     height: calc(100% - 3rem);
 }
 
-/* #endregion sidebar */
+/* #endregion section sidebar */
 
-/* #region message */
+/* #region section message */
 
 .message_top
 {
@@ -99,13 +107,25 @@ main.container
     background-image: url('/assets/img/mine.jpg');
 }
 
+.text_send
+{
+    background-color: var(--my-message_send);
+    color: var(--my-textcolor);
+}
+
+.text_received
+{
+    background-color: var(--my-message_received);
+    color: var(--my-textcolor);
+}
+
 .message_bottom
 {
     height: 3rem;
     background-color: var(--my-messagebar);
 }
 
-/* #endregion message */
+/* #endregion section message */
 
 
 /* #endregion main */
