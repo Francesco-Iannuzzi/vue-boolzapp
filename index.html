@@ -51,26 +51,24 @@
                         </div>
                         <!-- /notifications -->
 
-                        <div class="contacts">
-                            <div class="contacts_search p-1 input-group mb-3">
-                                <span class="input-group-text my_bg_light border-0" id="basic-addon1">
-                                    <i class="fa-solid fa-magnifying-glass my_text_icon"></i>
-                                </span>
-                                <input type="search" class="form-control border-0"
-                                    placeholder="Cerca o Inizia una nuova chat" aria-label="Search"
-                                    aria-describedby="basic-addon1">
-                            </div>
-                            <!-- /contact_search -->
+                        <div class="contacts_search p-1 input-group mb-3">
+                            <span class="input-group-text my_bg_light border-0" id="basic-addon1">
+                                <i class="fa-solid fa-magnifying-glass my_text_icon"></i>
+                            </span>
+                            <input type="search" class="form-control border-0"
+                                placeholder="Cerca o Inizia una nuova chat" aria-label="Search"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <!-- /contact_search -->
 
-                            <div class="contacts_list">
-                                <div class="contact_friend d-flex p-3 border-bottom border-top" v-for="(contact, index) in contacts" @click="setActiveContact(index)">
-                                    <img class="img-fluid rounded-circle ms-1 me-2" width="40"
-                                        :src="contact.avatar" alt="">
-                                    <div class="contacts_info d-flex flex-column">
-                                        <h6 class="m-0">{{contact.name}}</h6>
-                                        <span>Ultimo messaggio inviato</span>
-                                        <span class="hour">12:00</span>
-                                    </div>
+                        <div class="contacts_list">
+                            <div class="contact_friend d-flex p-3 border-bottom border-top"
+                                v-for="(contact, index) in contacts" @click="setActiveContact(index)">
+                                <img class="img-fluid rounded-circle ms-1 me-2" width="40" :src="contact.avatar" alt="">
+                                <div class="contacts_info d-flex flex-column">
+                                    <h6 class="m-0">{{contact.name}}</h6>
+                                    <span>Ultimo messaggio inviato</span>
+                                    <span class="hour">12:00</span>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +101,8 @@
 
                     <div class="message_main py-3">
                         <div class="container px-5">
-                            <div v-for="property in contacts[activeContact].messages" :class="property.status == 'sent' ? 'text_sent' : 'text_received'">
+                            <div v-for="property in contacts[activeContact].messages"
+                                :class="property.status == 'sent' ? 'text_sent' : 'text_received'">
                                 <p>{{property.message}}</p>
                                 <span>{{property.date}}</span>
                             </div>
