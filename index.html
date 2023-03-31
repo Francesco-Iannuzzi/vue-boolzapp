@@ -46,7 +46,7 @@
                             <i class="fa-solid fa-bell-slash align-self-center bg-light rounded-circle p-2 me-3"></i>
                             <div class="notifications_info">
                                 <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
-                                <span class="text-decoration-underline">Attiva notifiche desktop</span>
+                                <a href="#">Attiva notifiche da desktop</a>
                             </div>
                         </div>
                         <!-- /notifications -->
@@ -62,12 +62,12 @@
                             </div>
                             <!-- /contact_search -->
 
-                            <div class="contacts_friends">
-                                <div class="contact d-flex p-3 border-bottom border-top">
+                            <div class="contacts_list">
+                                <div class="contact_friend d-flex p-3 border-bottom border-top" v-for="(contact, index) in contacts">
                                     <img class="img-fluid rounded-circle ms-1 me-2" width="40"
-                                        src="./assets/img/avatar_1.jpg" alt="">
-                                    <div class="contacts_info">
-                                        <h6 class="m-0">Michele</h6>
+                                        :src="contact.avatar" alt="">
+                                    <div class="contacts_info d-flex flex-column">
+                                        <h6 class="m-0">{{contact.name}}</h6>
                                         <span>Ultimo messaggio inviato</span>
                                         <span class="hour">12:00</span>
                                     </div>

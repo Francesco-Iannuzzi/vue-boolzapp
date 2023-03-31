@@ -76,7 +76,7 @@ main.container
 
 .sidebar
 {
-    height: 51rem;
+    height: 50rem;
     border-right: 1px solid var(--my-icon);
 }
 
@@ -114,7 +114,7 @@ main.container
 }
 
 
-.notifications_info span
+.notifications_info a
 {
     color: var(--my-icon_message);
     font-size: 0.7rem;
@@ -125,11 +125,22 @@ main.container
     background-color: var(--my-header);
 }
 
-.contact
+.contacts_list
+{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.contact_friend
 {
     background-color: var(--my-light);
     border: var(--my-icon);
     position: relative;
+}
+
+.contact_friend:hover
+{
+    background-color: var(--my-header)
 }
 
 .contacts_info h6
@@ -144,7 +155,7 @@ main.container
     font-size: 0.7rem;
 }
 
-.contact .hour
+.contact_friend .hour
 {
     position: absolute;
     top: 10px;
@@ -156,6 +167,11 @@ main.container
 
 /* #region section message */
 
+.message
+{
+    height: 50rem;
+}
+
 .message_top
 {
     height: 3rem;
@@ -164,7 +180,7 @@ main.container
 
 .message_main
 {
-    height: calc(45rem);
+    height: calc(100% - 6rem);
     background-image: url('/assets/img/mine.jpg');
     overflow-y: auto;
 }
