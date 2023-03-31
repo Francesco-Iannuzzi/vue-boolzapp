@@ -140,7 +140,8 @@ main.container
 
 .contact_friend:hover
 {
-    background-color: var(--my-header)
+    background-color: var(--my-header);
+    cursor: pointer;
 }
 
 .contacts_info h6
