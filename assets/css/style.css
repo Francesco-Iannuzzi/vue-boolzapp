@@ -51,6 +51,11 @@ body
 {
     color: var(--my-icon_message);
 }
+
+.my_bg_light
+{
+    background-color: var(--my-light);
+}
 /* #endregion utilities */
 
 
@@ -75,16 +80,51 @@ main.container
     border-right: 1px solid var(--my-icon);
 }
 
+/* #region side_top */
+
 .side_top
 {
     height: 3rem;
     background-color: var(--my-header);
 }
 
+/* #endregion side_top */
+
+/* #region side_bottom */
+
 .side_bottom
 {
     height: calc(100% - 3rem);
 }
+
+.side_bottom .notifications
+{
+    background-color: var(--my-notifications);
+}
+
+
+.notifications i
+{
+    color: var(--my-notifications);
+}
+
+.notifications_bottom p
+{
+    font-size: 0.9rem;
+}
+
+
+.notifications_bottom span
+{
+    color: var(--my-icon_message);
+    font-size: 0.7rem;
+}
+
+.contacts_search
+{
+    background-color: var(--my-header);
+}
+/* #endregion side_top */
 
 /* #endregion section sidebar */
 
