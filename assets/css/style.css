@@ -38,8 +38,8 @@ body
     --my-icon_message: #6b7376;
     --my-messagebar: #f3eeea;
     --my-textcolor: #03071a;
-    --my-message_send: #ffffff;
-    --my-message_received: #d5f9ba;
+    --my-message_received: #ffffff;
+    --my-message_send: #d5f9ba;
 }
 
 .my_text_textcolor
@@ -107,16 +107,38 @@ main.container
     background-image: url('/assets/img/mine.jpg');
 }
 
+.text_send, .text_received
+{
+    margin-bottom: 0.7rem;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    position: relative;
+}
+
 .text_send
 {
     background-color: var(--my-message_send);
     color: var(--my-textcolor);
+    margin-left: 60%;
 }
 
 .text_received
 {
     background-color: var(--my-message_received);
     color: var(--my-textcolor);
+    margin-right: 60%;
+}
+
+.text_send > p, .text_received > p{
+    font-size: 0.8rem;
+}
+
+.text_send > span, .text_received > span{
+    color: var(--my-icon);
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: 5px;
+    right: 1rem;
 }
 
 .message_bottom
