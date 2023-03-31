@@ -86,10 +86,10 @@
 
                     <div class="message_top  d-flex justify-content-between px-1 my_text_textcolor">
                         <div class="align-self-center d-flex">
-                            <img class="img-fluid rounded-circle ms-1" width="40" src="./assets/img/avatar_1.jpg"
+                            <img class="img-fluid rounded-circle ms-1" width="40" :src="contacts[activeContact].avatar"
                                 alt="">
                             <div>
-                                <h6 class="align-self-center my-0 ms-1">Michele</h6>
+                                <h6 class="align-self-center my-0 ms-1">{{contacts[activeContact].name}}</h6>
                                 <span class="acces">ultimo accesso oggi alle 12:00</span>
                             </div>
                         </div>

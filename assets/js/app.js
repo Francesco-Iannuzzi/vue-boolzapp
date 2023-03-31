@@ -18,6 +18,7 @@ const { createApp } = Vue
  createApp({
    data() {
      return {
+        activeContact: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -183,5 +184,16 @@ const { createApp } = Vue
         ],
         message: 'hello'
      }
+   },
+   methods: {
+    setActiveContact(index){
+        this.activeContact = index;
+    },
+    getMessage(){
+        
+    }
+   },
+   mounted(){
+
    }
 }).mount('#app')
