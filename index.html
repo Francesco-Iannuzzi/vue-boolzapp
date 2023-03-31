@@ -114,7 +114,7 @@
                     <div class="message_bottom container-fluid d-flex my_text_icon_message p-0">
                         <i class="fa-regular fa-face-smile align-self-center px-4"></i>
                         <input class="form-control border-0 my-1" type="text" placeholder="Scrivi un messaggio"
-                            aria-label="text">
+                            aria-label="text" v-model="newMessage" @keyup.enter="submitMessage()">
                         <i class="fa-solid fa-microphone align-self-center  px-4"></i>
                     </div>
                     <!-- /message bottom -->

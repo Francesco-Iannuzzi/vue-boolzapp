@@ -19,6 +19,7 @@ const { createApp } = Vue
    data() {
      return {
         activeContact: 0,
+        newMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -181,19 +182,23 @@ const { createApp } = Vue
                     }
                 ],
             }
-        ],
-        message: 'hello'
+        ]
      }
    },
    methods: {
     setActiveContact(index){
         this.activeContact = index;
     },
-    getMessage(){
-        
+    submitMessage(){
+        console.log('cliccato su enter');
+        // this.contacts[activeContact].messages.push(
+        //     {
+        //         date: '10/01/2020 15:30:55',
+        //         message: this.newMessage,
+        //         status: 'sent'
+        //     },
+        // )
+        // this.newMessage = '';
     }
    },
-   mounted(){
-
-   }
 }).mount('#app')
