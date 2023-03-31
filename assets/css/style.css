@@ -1,0 +1,39 @@
+/* #region commons */
+
+body
+{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(180deg, #009688, #dadbd3);
+}
+
+/* #endregion commons */
+
+/* #region utilities */
+:root{
+    --my-backtop: #009688;
+    --my-backbottom: #dadbd3;
+    --my-header: #eaeaea;
+    --my-notifications: #8edafc;
+    --my-light: #ffffff;
+    --my-icon: #b1b1b1;
+    --my-messagebar: #f3eeea;
+    --my-textcolor: #03071a;
+}
+/* #endregion utilities */
+
+/* #region debug */
+
+.debug .container
+{
+    height: 600px;
+}
+
+
+/* #endregion debug */
+
+.container
+{
+    width: 80%;
+}
+
