@@ -70,6 +70,7 @@ body
 
 .sidebar
 {
+    height: 50rem;
     border-right: 1px solid var(--my-icon);
     background-color: var(--my-light);
 }
@@ -92,6 +93,7 @@ body
 
 .side_bottom .notifications
 {
+    height: 3rem;
     background-color: var(--my-notifications);
 }
 
@@ -114,11 +116,13 @@ body
 
 .contacts_search
 {
+    height: 3rem;
     background-color: var(--my-header);
 }
 
 .contacts_list
 {
+    height: calc(100% - 9rem);
     overflow-y: auto;
     background-color: var(--my-light);
 }
@@ -161,6 +165,7 @@ body
 
 .message
 {
+    height: 50rem;
     background-color: var(--my-light);
 }
 

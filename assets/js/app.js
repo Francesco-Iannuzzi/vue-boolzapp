@@ -243,10 +243,8 @@ createApp({
             this.contacts.forEach(contact => {
                 if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
                     contact.visible = true
-                    console.log(contact.visible);
                 } else {
                     contact.visible = false
-                    console.log(contact.visible);
                 }
             });
         },
