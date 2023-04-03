@@ -211,12 +211,6 @@ createApp({
             ],
             activeContact: 0,
             newMessage: '',
-            newMessageObject:
-            {
-                date: '10/01/2020 15:51:00',
-                message: this.newMessage,
-                status: 'sent'
-            }
         }
     },
     methods: {
@@ -225,7 +219,14 @@ createApp({
         },
         submitMessage(activeContact) {
             console.log('cliccato su enter');
-            this.contacts[activeContact].messages.push(this.newMessageObject);
+            this.contacts[activeContact].messages.push(
+                newMessageObject =
+                {
+                    date: '10/01/2020 15:51:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+            );
             this.newMessage = '';
         }
     },
