@@ -211,6 +211,7 @@ createApp({
             ],
             activeContact: 0,
             newMessage: '',
+            searchContact: '',
         }
     },
     methods: {
@@ -221,7 +222,7 @@ createApp({
             this.contacts[activeContact].messages.push(
                 newMessageSent =
                 {
-                    date: '10/01/2020 15:51:00',
+                    date: new Date().toLocaleString(),
                     message: this.newMessage,
                     status: 'sent'
                 }
@@ -230,7 +231,7 @@ createApp({
                 this.contacts[activeContact].messages.push(
                     newMessageReceived =
                     {
-                        date: '10/01/2020 15:51:00',
+                        date: new Date().toLocaleString(),
                         message: 'ok',
                         status: 'received'
                     }
@@ -240,5 +241,6 @@ createApp({
         }
     },
     mounted() {
+
     }
 }).mount('#app')

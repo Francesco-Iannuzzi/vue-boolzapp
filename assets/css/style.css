@@ -11,8 +11,8 @@ body
     background: linear-gradient(0deg, #dadbd3 90%, #009688 10%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 2rem;
-    /* overflow: hidden; */
+    overflow: hidden;
+    padding-top: 2rem;
 }
 
 .acces
@@ -61,7 +61,7 @@ body
 
 /* #region main */
 
-main.container
+#app_main
 {
     width: 80%;
 }
@@ -88,7 +88,6 @@ main.container
 .side_bottom .notifications
 {
     background-color: var(--my-notifications);
-    height: 5rem;
 }
 
 .notifications i
@@ -110,14 +109,14 @@ main.container
 
 .contacts_search
 {
-    height: 3rem;
     background-color: var(--my-header);
 }
 
 .contacts_list
 {
-    height: calc(100% - 11rem);
+    height: 70vh;
     overflow-y: auto;
+    background-color: var(--my-light);
 }
 
 .contact_friend
