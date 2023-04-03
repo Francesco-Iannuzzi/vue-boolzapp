@@ -242,16 +242,14 @@ createApp({
         checkVisible() {
             this.contacts.forEach(contact => {
                 if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
-                    //console.log('trovatooooooooooooo');
-                    this.contacts[this.activeContact].visible = true
-                    console.log(this.contacts[this.activeContact].visible);
+                    contact.visible = true
+                    console.log(contact.visible);
                 } else {
-                    //console.log('non trovatooooooooo');
-                    this.contacts[this.activeContact].visible = false
+                    contact.visible = false
+                    console.log(contact.visible);
                 }
             });
-            
-        }
+        },
     },
     mounted() {
         
