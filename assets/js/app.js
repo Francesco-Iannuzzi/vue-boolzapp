@@ -42,8 +42,6 @@ const { createApp } = Vue
  createApp({
    data() {
      return {
-        activeContact: 0,
-        newMessage: '',
         me: {
             name: 'Sofia',
             avatar: './assets/img/avatar_io.jpg',
@@ -210,23 +208,24 @@ const { createApp } = Vue
                     }
                 ],
             }
-        ]
+        ],
+        activeContact: 0,
+        newMessage: '',
+        newMessageObject: {
+            date: '10/01/2020 15:30:55',
+            message: this.newMessage,
+            status: 'sent'
+        },
      }
    },
    methods: {
     setActiveContact(index){
         this.activeContact = index;
     },
-    submitMessage(){
+    submitMessage(activeContact){
         console.log('cliccato su enter');
-        // this.contacts[activeContact].messages.push(
-        //     {
-        //         date: '10/01/2020 15:30:55',
-        //         message: this.newMessage,
-        //         status: 'sent'
-        //     },
-        // )
-        // this.newMessage = '';
+        this.contacts[activeContact].push(newMessageObject)
+        this.newMessage = '';
     }
    },
 }).mount('#app')

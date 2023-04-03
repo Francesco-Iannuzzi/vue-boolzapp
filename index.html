@@ -42,9 +42,9 @@
                     <!-- /side_top -->
 
                     <div class="side_bottom">
-                        <div class="notifications d-flex p-3">
+                        <div class="notifications d-flex px-3 py-2">
                             <i class="fa-solid fa-bell-slash align-self-center bg-light rounded-circle p-2 me-3"></i>
-                            <div class="notifications_info">
+                            <div class="notifications_info d-flex flex-column justify-content-center">
                                 <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
                                 <a href="#">Attiva notifiche da desktop</a>
                             </div>
@@ -114,7 +114,7 @@
                     <div class="message_bottom container-fluid d-flex my_text_icon_message p-0">
                         <i class="fa-regular fa-face-smile align-self-center px-4"></i>
                         <input class="form-control border-0 my-1" type="text" placeholder="Scrivi un messaggio"
-                            aria-label="text" v-model="newMessage" @keyup.enter="submitMessage()">
+                            aria-label="text" v-model="newMessage" @keyup.enter="submitMessage(activeContact)">
                         <i class="fa-solid fa-microphone align-self-center  px-4"></i>
                     </div>
                     <!-- /message bottom -->
