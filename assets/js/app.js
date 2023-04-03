@@ -218,15 +218,24 @@ createApp({
             this.activeContact = index;
         },
         submitMessage(activeContact) {
-            console.log('cliccato su enter');
             this.contacts[activeContact].messages.push(
-                newMessageObject =
+                newMessageSent =
                 {
                     date: '10/01/2020 15:51:00',
                     message: this.newMessage,
                     status: 'sent'
                 }
             );
+            setTimeout(() => {
+                this.contacts[activeContact].messages.push(
+                    newMessageReceived =
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: 'ok',
+                        status: 'received'
+                    }
+                )
+            }, 1000);
             this.newMessage = '';
         }
     },
