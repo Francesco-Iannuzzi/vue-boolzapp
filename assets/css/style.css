@@ -8,12 +8,11 @@
 
 body
 {
-    height: 100%;
-    width: 100%;
     background: linear-gradient(0deg, #dadbd3 90%, #009688 10%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 2rem;
+    overflow: hidden;
 }
 
 .acces
@@ -65,14 +64,12 @@ body
 main.container
 {
     width: 80%;
-    background-color: white;
 }
 
 /* #region section sidebar */
 
 .sidebar
 {
-    height: 50rem;
     border-right: 1px solid var(--my-icon);
 }
 
@@ -159,11 +156,6 @@ main.container
 /* #endregion section sidebar */
 
 /* #region section message */
-
-.message
-{
-    height: 50rem;
-}
 
 .message_top
 {

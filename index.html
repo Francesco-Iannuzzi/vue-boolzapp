@@ -20,7 +20,7 @@
     <title>Boolzapp</title>
 </head>
 
-<body class="debug">
+<body>
 
     <div id="app">
         <main id="app_main" class="container">
@@ -29,9 +29,9 @@
                 <section class="col-4 sidebar p-0">
                     <div class="side_top d-flex justify-content-between px-1 my_text_textcolor">
                         <div class="align-self-center d-flex">
-                            <img class="img-fluid rounded-circle ms-1" width="40" src="./assets/img/avatar_io.jpg"
+                            <img class="img-fluid rounded-circle ms-1" width="40" :src="me.avatar"
                                 alt="">
-                            <h6 class="align-self-center my-0 ms-1">Sofia</h6>
+                            <h6 class="align-self-center my-0 ms-1">{{me.name}}</h6>
                         </div>
                         <div class="d-flex gap-3 align-self-center my_text_icon me-2">
                             <i class="fa-solid fa-circle-notch"></i>
