@@ -238,9 +238,24 @@ createApp({
                 )
             }, 1000);
             this.newMessage = '';
+        },
+        checkVisible() {
+            this.contacts.forEach(contact => {
+                if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+                    //console.log('trovatooooooooooooo');
+                    this.contacts[this.activeContact].visible = true
+                    console.log(this.contacts[this.activeContact].visible);
+                } else {
+                    //console.log('non trovatooooooooo');
+                    this.contacts[this.activeContact].visible = false
+                }
+            });
+            
         }
     },
     mounted() {
-
+        
     }
 }).mount('#app')
+
+// searchContact.toLowerCase().includes(contact.name.toLowerCase())

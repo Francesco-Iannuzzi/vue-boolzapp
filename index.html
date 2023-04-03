@@ -56,15 +56,14 @@
                             </span>
                             <input type="search" class="form-control border-0"
                                 placeholder="Cerca o Inizia una nuova chat" aria-label="Search"
-                                aria-describedby="basic-addon1" v-model="searchContact">
+                                aria-describedby="basic-addon1" v-model.trim="searchContact" @keyup="checkVisible">
                         </div>
                         <!-- /contact_search -->
 
                         <div class="contacts_list">
                             <div class="contact_friend" v-for="(contact, index) in contacts"
                                 @click="setActiveContact(index)">
-                                <div v-if="searchContact == '' "
-                                    class="d-flex p-3 border-bottom border-top">
+                                <div v-if="searchContact == ''" class="d-flex p-3 border-bottom border-top">
                                     <img class="rounded-circle ms-1 me-2" width="40" :src="contact.avatar" alt="">
                                     <div class="contacts_info d-flex flex-column">
                                         <h6 class="m-0">{{contact.name}}</h6>
@@ -72,8 +71,7 @@
                                         <span class="hour">12:00</span>
                                     </div>
                                 </div>
-                                <div v-else-if="searchContact.toLowerCase().charAt().includes(contact.name.toLowerCase().charAt())"
-                                    class="d-flex p-3 border-bottom border-top">
+                                <div v-else-if="contact.visible == true" class="d-flex p-3 border-bottom border-top">
                                     <img class="rounded-circle ms-1 me-2" width="40" :src="contact.avatar" alt="">
                                     <div class="contacts_info d-flex flex-column">
                                         <h6 class="m-0">{{contact.name}}</h6>

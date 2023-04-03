@@ -11,7 +11,7 @@ body
     background: linear-gradient(0deg, #dadbd3 90%, #009688 10%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-top: 2rem;
 }
 
@@ -71,6 +71,7 @@ body
 .sidebar
 {
     border-right: 1px solid var(--my-icon);
+    background-color: var(--my-light);
 }
 
 /* #region side_top */
@@ -84,6 +85,10 @@ body
 /* #endregion side_top */
 
 /* #region side_bottom */
+.side_bottom
+{
+    height: 100% - 3rem;
+}
 
 .side_bottom .notifications
 {
@@ -114,14 +119,12 @@ body
 
 .contacts_list
 {
-    height: 70vh;
     overflow-y: auto;
     background-color: var(--my-light);
 }
 
 .contact_friend
 {
-    background-color: var(--my-light);
     border: var(--my-icon);
     position: relative;
 }
@@ -155,6 +158,11 @@ body
 /* #endregion section sidebar */
 
 /* #region section message */
+
+.message
+{
+    background-color: var(--my-light);
+}
 
 .message_top
 {
