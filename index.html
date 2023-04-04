@@ -143,7 +143,8 @@
                         <i class="fa-regular fa-face-smile align-self-center px-4"></i>
                         <input class="form-control border-0 my-1" type="text" placeholder="Scrivi un messaggio"
                             aria-label="text" v-model="newMessage" @keyup.enter="submitMessage">
-                        <i class="fa-solid fa-microphone align-self-center  px-4"></i>
+                        <i v-if="newMessage == ''" class="fa-solid fa-microphone align-self-center  px-4"></i>
+                        <i @click="submitMessage" v-else class="fa-regular fa-paper-plane align-self-center  px-4"></i>
                     </div>
                     <!-- /message bottom -->
 
