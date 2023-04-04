@@ -37,6 +37,8 @@ lista dei contatti
 
 */
 
+const dt = luxon.DateTime;
+
 const { createApp } = Vue
 
 createApp({
@@ -226,39 +228,37 @@ createApp({
             this.contacts[this.activeContact].messages.push(
                 newMessageSent =
                 {
-                    date: new Date().toLocaleString('it'),
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: this.newMessage,
                     status: 'sent'
                 }
-                );
-                setTimeout(() => {
-                    this.contacts[this.activeContact].messages.push(
-                        newMessageReceived =
-                        {
-                            date: new Date().toLocaleString('it'),
-                            message: 'ok',
-                            status: 'received'
-                        }
-                        )
-                    }, 1000);
-                    this.newMessage = '';
-                },
-                checkVisible() {
-                    this.contacts.forEach(contact => {
-                        if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
-                            contact.visible = true
-                        } else {
-                            contact.visible = false
-                        }
-                    });
-                },
-                deleteMessage(index) {
-                    this.contacts[this.activeContact].messages.splice(index, 1)
+            );
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push(
+                    newMessageReceived =
+                    {
+                        date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                        message: 'ok',
+                        status: 'received'
+                    }
+                )
+            }, 1000);
+            this.newMessage = '';
+        },
+        checkVisible() {
+            this.contacts.forEach(contact => {
+                if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+                    contact.visible = true
+                } else {
+                    contact.visible = false
                 }
-            },
-            mounted() {
-                
-            }
-        }).mount('#app')
-        
-        // searchContact.toLowerCase().includes(contact.name.toLowerCase())
+            });
+        },
+        deleteMessage(index) {
+            this.contacts[this.activeContact].messages.splice(index, 1)
+        }
+    },
+    mounted() {
+
+    }
+}).mount('#app')
