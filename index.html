@@ -69,7 +69,7 @@
                                     <div class="contacts_info d-flex flex-column">
                                         <h6 class="m-0">{{contact.name}}</h6>
                                         <span>Ultimo messaggio inviato</span>
-                                        <span class="hour">12:00</span>
+                                        <span v-for="(property, index) in contact.messages" class="hour">{{property.date}}</span>
                                     </div>
                                 </div>
                                 <!-- /all contact -->
