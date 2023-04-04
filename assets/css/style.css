@@ -11,7 +11,7 @@ body
     background: linear-gradient(0deg, #dadbd3 90%, #009688 10%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding-top: 2rem;
 }
 
@@ -60,6 +60,11 @@ body
 /* #endregion utilities */
 
 /* #region main */
+
+#app
+{
+    height: 100vh;
+}
 
 #app_main
 {

@@ -64,7 +64,7 @@
                             <div class="contact_friend" v-for="(contact, index) in contacts"
                                 @click="setActiveContact(index)">
                                 <div v-if="searchContact == ''" class="d-flex p-3 border-bottom border-top">
-                                    <img class="rounded-circle ms-1 me-2" width="40" :src="contact.avatar" alt="">
+                                    <img class="img-fluid rounded-circle ms-1 me-2" width="40" :src="contact.avatar" alt="">
                                     <div class="contacts_info d-flex flex-column">
                                         <h6 class="m-0">{{contact.name}}</h6>
                                         <span>Ultimo messaggio inviato</span>
@@ -73,7 +73,7 @@
                                 </div>
                                 <!-- /all contact -->
 
-                                <div v-else-if="contact.visible == true" class="d-flex p-3 border-bottom border-top">
+                                <div v-else-if="contact.visible" class="d-flex p-3 border-bottom border-top">
                                     <img class="rounded-circle ms-1 me-2" width="40" :src="contact.avatar" alt="">
                                     <div class="contacts_info d-flex flex-column">
                                         <h6 class="m-0">{{contact.name}}</h6>
@@ -114,10 +114,10 @@
 
                     <div class="message_main py-3">
                         <div class="container px-5">
-                            <div v-for="property in contacts[activeContact].messages"
-                                :class="property.status == 'sent' ? 'text_sent' : 'text_received'">
-                                <p>{{property.message}}</p>
-                                <span>{{property.date}}</span>
+                            <div v-for="message in contacts[activeContact].messages"
+                                :class="message.status == 'sent' ? 'text_sent' : 'text_received'">
+                                <p>{{message.message}}</p>
+                                <span>{{message.date}}</span>
                             </div>
                             <!-- /text send and riceived -->
                         </div>
@@ -127,7 +127,7 @@
                     <div class="message_bottom container-fluid d-flex my_text_icon_message p-0">
                         <i class="fa-regular fa-face-smile align-self-center px-4"></i>
                         <input class="form-control border-0 my-1" type="text" placeholder="Scrivi un messaggio"
-                            aria-label="text" v-model="newMessage" @keyup.enter="submitMessage(activeContact)">
+                            aria-label="text" v-model="newMessage" @keyup.enter="submitMessage">
                         <i class="fa-solid fa-microphone align-self-center  px-4"></i>
                     </div>
                     <!-- /message bottom -->

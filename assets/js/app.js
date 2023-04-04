@@ -218,20 +218,20 @@ createApp({
         setActiveContact(index) {
             this.activeContact = index;
         },
-        submitMessage(activeContact) {
-            this.contacts[activeContact].messages.push(
+        submitMessage() {
+            this.contacts[this.activeContact].messages.push(
                 newMessageSent =
                 {
-                    date: new Date().toLocaleString(),
+                    date: new Date().toLocaleString('it'),
                     message: this.newMessage,
                     status: 'sent'
                 }
             );
             setTimeout(() => {
-                this.contacts[activeContact].messages.push(
+                this.contacts[this.activeContact].messages.push(
                     newMessageReceived =
                     {
-                        date: new Date().toLocaleString(),
+                        date: new Date().toLocaleString('it'),
                         message: 'ok',
                         status: 'received'
                     }
