@@ -210,6 +210,7 @@ createApp({
                 }
             ],
             activeContact: 0,
+            activeMessage: 0,
             newMessage: '',
             searchContact: '',
         }
@@ -217,6 +218,9 @@ createApp({
     methods: {
         setActiveContact(index) {
             this.activeContact = index;
+        },
+        setActiveMessage(index) {
+            this.activeMessage = index;
         },
         submitMessage() {
             this.contacts[this.activeContact].messages.push(
@@ -226,32 +230,35 @@ createApp({
                     message: this.newMessage,
                     status: 'sent'
                 }
-            );
-            setTimeout(() => {
-                this.contacts[this.activeContact].messages.push(
-                    newMessageReceived =
-                    {
-                        date: new Date().toLocaleString('it'),
-                        message: 'ok',
-                        status: 'received'
-                    }
-                )
-            }, 1000);
-            this.newMessage = '';
-        },
-        checkVisible() {
-            this.contacts.forEach(contact => {
-                if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
-                    contact.visible = true
-                } else {
-                    contact.visible = false
+                );
+                setTimeout(() => {
+                    this.contacts[this.activeContact].messages.push(
+                        newMessageReceived =
+                        {
+                            date: new Date().toLocaleString('it'),
+                            message: 'ok',
+                            status: 'received'
+                        }
+                        )
+                    }, 1000);
+                    this.newMessage = '';
+                },
+                checkVisible() {
+                    this.contacts.forEach(contact => {
+                        if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+                            contact.visible = true
+                        } else {
+                            contact.visible = false
+                        }
+                    });
+                },
+                deleteMessage(index) {
+                    this.contacts[this.activeContact].messages.splice(index, this.activeMessage)
                 }
-            });
-        },
-    },
-    mounted() {
+            },
+            mounted() {
+                
+            }
+        }).mount('#app')
         
-    }
-}).mount('#app')
-
-// searchContact.toLowerCase().includes(contact.name.toLowerCase())
+        // searchContact.toLowerCase().includes(contact.name.toLowerCase())

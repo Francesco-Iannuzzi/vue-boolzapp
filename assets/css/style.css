@@ -221,6 +221,13 @@ body
     right: 1rem;
 }
 
+.text_sent .dropdown, .text_received .dropdown
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
 .message_bottom
 {
     height: 3rem;

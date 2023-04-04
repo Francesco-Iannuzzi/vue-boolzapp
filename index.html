@@ -64,7 +64,8 @@
                             <div class="contact_friend" v-for="(contact, index) in contacts"
                                 @click="setActiveContact(index)">
                                 <div v-if="searchContact == ''" class="d-flex p-3 border-bottom border-top">
-                                    <img class="img-fluid rounded-circle ms-1 me-2" width="40" :src="contact.avatar" alt="">
+                                    <img class="img-fluid rounded-circle ms-1 me-2" width="40" :src="contact.avatar"
+                                        alt="">
                                     <div class="contacts_info d-flex flex-column">
                                         <h6 class="m-0">{{contact.name}}</h6>
                                         <span>Ultimo messaggio inviato</span>
@@ -82,7 +83,7 @@
                                     </div>
                                 </div>
                                 <!-- /researched contact -->
-                                
+
                             </div>
                         </div>
                         <!-- /contacts -->
@@ -114,10 +115,24 @@
 
                     <div class="message_main py-3">
                         <div class="container px-5">
-                            <div v-for="message in contacts[activeContact].messages"
-                                :class="message.status == 'sent' ? 'text_sent' : 'text_received'">
+                            <div v-for="(message, index) in contacts[activeContact].messages"
+                                :class="message.status == 'sent' ? 'text_sent' : 'text_received'" @click="setActiveMessage(index)">
                                 <p>{{message.message}}</p>
                                 <span>{{message.date}}</span>
+                                <div class="dropdown">
+                                    <a href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-chevron-down my_text_icon"></i>
+                                    </a>
+                                    <ul class="dropdown-menu rounded-1 shadow-lg">
+                                        <li>
+                                            <span class="dropdown-item">Message info</span>
+                                        </li>
+                                        <li @click="deleteMessage(index)">
+                                            <span class="dropdown-item">Delete message</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <!-- /text send and riceived -->
                         </div>
