@@ -253,7 +253,7 @@ createApp({
                     });
                 },
                 deleteMessage(index) {
-                    this.contacts[this.activeContact].messages.splice(index, this.activeMessage)
+                    this.contacts[this.activeContact].messages.splice(index, 1)
                 }
             },
             mounted() {
