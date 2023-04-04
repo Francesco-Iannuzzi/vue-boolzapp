@@ -1,17 +1,10 @@
 /* #region commons */
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body
 {
     background: linear-gradient(0deg, #dadbd3 90%, #009688 10%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-top: 2rem;
 }
 
@@ -127,7 +120,7 @@ body
 
 .contacts_list
 {
-    height: calc(100% - 9rem);
+    height: 41rem;
     overflow-y: auto;
     background-color: var(--my-light);
 }
