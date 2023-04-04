@@ -256,9 +256,22 @@ createApp({
         },
         deleteMessage(index) {
             this.contacts[this.activeContact].messages.splice(index, 1)
+        },
+        printDate(contact) {
+            if (contact.messages.length > 0) {
+                return contact.messages[contact.messages.length - 1].date
+            } else {
+                return ('')
+            }
+        },
+        pintLastText(contact) {      
+            if (contact.messages.length > 0) {
+                return contact.messages[contact.messages.length - 1].message
+            } else {
+                return ('No messages')
+            }
         }
     },
     mounted() {
-
     }
 }).mount('#app')

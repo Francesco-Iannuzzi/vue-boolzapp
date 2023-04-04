@@ -68,8 +68,8 @@
                                         alt="">
                                     <div class="contacts_info d-flex flex-column">
                                         <h6 class="m-0">{{contact.name}}</h6>
-                                        <span>Ultimo messaggio inviato</span>
-                                        <span v-for="(property, index) in contact.messages" class="hour">{{property.date}}</span>
+                                        <span>{{pintLastText(contact)}}</span>
+                                        <span class="hour">{{printDate(contact)}}</span>
                                     </div>
                                 </div>
                                 <!-- /all contact -->
