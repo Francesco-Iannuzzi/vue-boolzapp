@@ -226,7 +226,6 @@ createApp({
         },
         submitMessage() {
             this.contacts[this.activeContact].messages.push(
-                newMessageSent =
                 {
                     date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: this.newMessage,
@@ -235,7 +234,6 @@ createApp({
             );
             setTimeout(() => {
                 this.contacts[this.activeContact].messages.push(
-                    newMessageReceived =
                     {
                         date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                         message: 'ok',
