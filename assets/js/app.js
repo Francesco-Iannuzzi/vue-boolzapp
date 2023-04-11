@@ -262,7 +262,7 @@ createApp({
                 return ('')
             }
         },
-        pintLastText(contact) {      
+        printLastText(contact) {      
             if (contact.messages.length > 0) {
                 return contact.messages[contact.messages.length - 1].message
             } else {
